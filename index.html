@@ -12,58 +12,78 @@
   <!-- Header Section -->
   <div id="header"></div>
 
-  <section id="worldmap" class="bg-light text-dark">
+  <section class="text-dark pt-3">
     <div class="container">
-      <div class="row">
-        <div class="col-md-8 mt-3">
+      <div class="d-lg-flex gap-3">
+        <div class="flex-grow-1 pb-2">
           <h2 class="fw-bold">Ursprung und Ziele von Waren</h2>
           <p class="small">Wähle einen Marker auf der Karte aus. Die Karte zeigt wichtige Handelspartner Deutschlands. Die Linien sind eine vereinfachte Visualisierung von Handelsbeziehungen, keine konkreten Transportwege.</p>
           <div id="map" style="height: 500px"></div>
           <div class="small mt-2 p-2 bg-warning-subtle text-warning-emphasis">Hinweis: Die Kartenpositionen markieren Länder, nicht einzelne Häfen, Fabriken oder tatsächliche Routen.</div>
         </div>
-        <div class="col mt-3">
-          <h2 class="fw-bold mb-3">Außenhandel im Überblick</h2>
+        <div class="pb-2">
+          <h2 class="fw-bold">Außenhandel im Überblick</h2>
           <p class="small">Deutschland | Januar 2026 | vorläufige Detaildaten</p>
-          <div class="row g-2">
+          <div class="row g-2 mb-2">
             <div class="col">
-              <div class="card mb-3">
+              <div class="card">
                 <div class="card-body">
                   <p class="card-subtitle small text-muted">Ausfuhr / Export</p>
-                  <p class="card-title fw-bold fs-4">0,00 Mrd. €</p>
-                  <p class="card-subtitle small text-muted">Waren ins Ausland</p>
+                  <p class="card-title fw-bold fs-4">0,00 Mrd.&nbsp;€</p>
+                  <p class="card-subtitle small text-muted">Waren&nbsp;ins&nbsp;Ausland</p>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card mb-3">
+              <div class="card">
                 <div class="card-body">
                   <p class="card-subtitle small text-muted">Einfuhr / Import</p>
-                  <p class="card-title fw-bold fs-4">0,00 Mrd. €</p>
-                  <p class="card-subtitle small text-muted">Waren nach Deutschland</p>
+                  <p class="card-title fw-bold fs-4">0,00 Mrd.&nbsp;€</p>
+                  <p class="card-subtitle small text-muted">Waren&nbsp;nach&nbsp;Deutschland</p>
                 </div>
               </div>
             </div>
           </div>
           
-          <div class="card mb-3">
+          <div class="card">
             <div class="card-body">
-              <h3 class="card-title fw-bold mb-3">Polen</h3>
-              <p class="mb-1"><b>2025:</b> Export 100,1 Mrd. € | Import 80,4 Mrd. €</p>
-              <p class="mb-1"><b>Jan–Jul 2026:</b> Export 63,2 Mrd. € | Import 47,9 Mrd. €</p>
+              <h3 class="card-title fw-bold">Polen</h3>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <th>Period</th>
+                    <th>Export&nbsp;Mrd.&nbsp;€</th>
+                    <th>Import&nbsp;Mrd.&nbsp;€</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2025</td>
+                      <td>100,1</td>
+                      <td>80,4</td>
+                    </tr>
+                    <tr>
+                      <td>Jan-Jul 2026</td>
+                      <td>63,2</td>
+                      <td>47,9</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
               <p class="mb-1"><b>Hauptwarenbereiche:</b> Maschinen, Fahrzeuge, chemische Erzeugnisse</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Footer Section -->
   <div id="footer"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="app.js"></script>
+  <script src="map.js"></script>
   <script src="shared.js"></script>
 </body>
 </html>
