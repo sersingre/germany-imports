@@ -19,17 +19,19 @@
           <h2 class="fw-bold">Ursprung und Ziele von Waren</h2>
           <p class="small">Wähle einen Marker auf der Karte aus. Die Karte zeigt wichtige Handelspartner Deutschlands. Die Linien sind eine vereinfachte Visualisierung von Handelsbeziehungen, keine konkreten Transportwege.</p>
           <div id="map" style="height: 500px"></div>
-          <div class="small mt-2 p-2 bg-warning-subtle text-warning-emphasis">Hinweis: Die Kartenpositionen markieren Länder, nicht einzelne Häfen, Fabriken oder tatsächliche Routen.</div>
+          <div class="small mt-2 p-2 bg-warning-subtle text-warning-emphasis">
+            Hinweis: Die Kartenfarben zeigen die gesamte Menge des Außenhandels mit jedem Land an, wobei grün für eine hohe und rot für eine niedrige Menge steht.
+          </div>
         </div>
         <div class="pb-2">
           <h2 class="fw-bold">Außenhandel im Überblick</h2>
-          <p class="small">Deutschland | Januar 2026 | vorläufige Detaildaten</p>
+          <p class="small">Deutschland | 2025 | vorläufige Detaildaten</p>
           <div class="row g-2 mb-2">
             <div class="col">
               <div class="card">
                 <div class="card-body">
                   <p class="card-subtitle small text-muted">Ausfuhr / Export</p>
-                  <p class="card-title fw-bold fs-4">0,00 Mrd.&nbsp;€</p>
+                  <p class="card-title fw-bold fs-4">1.564,19 Mrd.&nbsp;€</p>
                   <p class="card-subtitle small text-muted">Waren&nbsp;ins&nbsp;Ausland</p>
                 </div>
               </div>
@@ -38,7 +40,7 @@
               <div class="card">
                 <div class="card-body">
                   <p class="card-subtitle small text-muted">Einfuhr / Import</p>
-                  <p class="card-title fw-bold fs-4">0,00 Mrd.&nbsp;€</p>
+                  <p class="card-title fw-bold fs-4">2.926,08 Mrd.&nbsp;€</p>
                   <p class="card-subtitle small text-muted">Waren&nbsp;nach&nbsp;Deutschland</p>
                 </div>
               </div>
@@ -47,30 +49,32 @@
           
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title fw-bold">Polen</h3>
+              <div class="h3 card-title fw-bold">
+                <div id="country_name"></div>
+              </div>
               <div class="table-responsive">
                 <table class="table">
                   <thead>
                     <th>Period</th>
-                    <th>Export&nbsp;Mrd.&nbsp;€</th>
-                    <th>Import&nbsp;Mrd.&nbsp;€</th>
+                    <th>Export&nbsp;Mio.&nbsp;€</th>
+                    <th>Import&nbsp;Mio.&nbsp;€</th>
                   </thead>
                   <tbody>
                     <tr>
                       <td>2025</td>
-                      <td>100,1</td>
-                      <td>80,4</td>
+                      <td><div id="export_2025"></div></td>
+                      <td><div id="import_2025"></div></td>
                     </tr>
                     <tr>
                       <td>Jan-Jul 2026</td>
-                      <td>63,2</td>
-                      <td>47,9</td>
+                      <td><div id="export_2026"></div></td>
+                      <td><div id="import_2026"></div></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               
-              <p class="mb-1"><b>Hauptwarenbereiche:</b> Maschinen, Fahrzeuge, chemische Erzeugnisse</p>
+              <p class="mb-1"><b>Hauptwarenbereiche:</b> [Platzhalter]</p>
             </div>
           </div>
         </div>
