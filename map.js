@@ -4,6 +4,7 @@ var countries = {};
 var worldGeoJson = null;
 const trade_2025_file = "data/trade-2025.json";
 const trade_2026_file = "data/trade-2026.json";
+const trade_cat_file = "data/trade-categories.json";
 
 
 function getMaxTotalExpImp(countries) {
@@ -49,11 +50,38 @@ function styleFeature(feature) {
 }
 
 
+function populateTradeCat(country_code, countries_cat, HTMLElement_im) {
+  // HTMLElement_ex.innerHTML = "";
+  HTMLElement_im.innerHTML = "";
+
+  if (!countries_cat[country_code]) {
+    // HTMLElement_ex.innerHTML = "<li>Keine Daten verfügbar</li>"
+    HTMLElement_im.innerHTML = "<li>Keine Daten verfügbar</li>"
+
+    return null
+  }
+
+  // for (cat of countries_cat[country_code].export) {
+  //   var li = document.createElement("il");
+  //   li.innerHTML = cat;
+  //   HTMLElement_ex.appendChild(li);
+  // }
+
+  for (cat of countries_cat[country_code].import) {
+    var li = document.createElement("il");
+    li.innerHTML = cat;
+    HTMLElement_im.appendChild(li);
+  }
+}
+
+
 async function displayTradeData(country_code) {
   const resp_countries_2025 = await fetch(trade_2025_file);
   const resp_countries_2026 = await fetch(trade_2026_file);
+  const resp_countries_cat = await fetch(trade_cat_file);
   const countries_2025 = await resp_countries_2025.json();
   const countries_2026 = await resp_countries_2026.json();
+  const countries_cat = await resp_countries_cat.json();
 
   const country_name = countries_2026[country_code] ? countries_2026[country_code].german_name : country_code; // "Keine Daten Verfügbar";
   const export_2025 = countries_2025[country_code] ? countries_2025[country_code].export  / 1000 : "-";
@@ -66,12 +94,16 @@ async function displayTradeData(country_code) {
   var cardDataIm_2025 = document.getElementById("import_2025");
   var cardDataEx_2026 = document.getElementById("export_2026");
   var cardDataIm_2026 = document.getElementById("import_2026");
+  // var ex_commodities = document.getElementById("export_comodities");
+  var im_commodities = document.getElementById("import_comodities");
 
   cardTitle.innerHTML = country_name;
   cardDataEx_2025.innerHTML = export_2025.toLocaleString("de-DE");
   cardDataIm_2025.innerHTML = import_2025.toLocaleString("de-DE");
   cardDataEx_2026.innerHTML = export_2026.toLocaleString("de-DE");
   cardDataIm_2026.innerHTML = import_2026.toLocaleString("de-DE");
+
+  populateTradeCat(country_code, countries_cat, im_commodities);
 }
 
 

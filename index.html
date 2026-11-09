@@ -14,8 +14,8 @@
 
   <section class="text-dark pt-3">
     <div class="container">
-      <div class="d-lg-flex gap-3">
-        <div class="flex-grow-1 pb-2">
+      <div class="row g-3">
+        <div class="col-lg-7 pb-2">
           <h2 class="fw-bold">Ursprung und Ziele von Waren</h2>
           <p class="small">Wähle einen Marker auf der Karte aus. Die Karte zeigt wichtige Handelspartner Deutschlands. Die Linien sind eine vereinfachte Visualisierung von Handelsbeziehungen, keine konkreten Transportwege.</p>
           <div id="map" style="height: 500px"></div>
@@ -23,7 +23,7 @@
             Hinweis: Die Kartenfarben zeigen die gesamte Menge des Außenhandels mit jedem Land an, wobei grün für eine hohe und rot für eine niedrige Menge steht.
           </div>
         </div>
-        <div class="pb-2">
+        <div class="col pb-2">
           <h2 class="fw-bold">Außenhandel im Überblick</h2>
           <p class="small">Deutschland | 2025 | vorläufige Detaildaten</p>
           <div class="row g-2 mb-2">
@@ -74,7 +74,12 @@
                 </table>
               </div>
               
-              <p class="mb-1"><b>Hauptwarenbereiche:</b> [Platzhalter]</p>
+              <!-- <p class="mb-1"><b>Export-Warenbereiche:</b></p>
+              <ul class="d-flex flex-column" id="export_comodities" style="list-style-type:none;">
+              </ul> -->
+              <p class="mb-1"><b>Import-Warenbereiche:</b></p>
+              <ul class="d-flex flex-column" id="import_comodities" style="list-style-type:none;">
+              </ul>
             </div>
           </div>
         </div>
