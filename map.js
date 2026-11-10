@@ -127,5 +127,5 @@ async function drawMap(tradedata, geojson) {
   }).addTo(map);
 }
 
-drawMap(trade_2026_file, "data/ne_110m_admin_0_countries.json");
+drawMap(trade_2026_file, "data/ne_50m_admin_0_countries_lakes.json");
 displayTradeData('CHN');
